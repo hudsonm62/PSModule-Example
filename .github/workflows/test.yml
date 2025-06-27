@@ -22,7 +22,7 @@ jobs:
           $config = New-PesterConfiguration
           $config.CodeCoverage.Enabled = $true
           $config.TestResult.Enabled = $true
-          Invoke-Pester
+          Invoke-Pester -Configuration $config
 
       - name: Upload code coverage report
         if: ${{ always() }}
@@ -46,7 +46,7 @@ jobs:
           $config = New-PesterConfiguration
           $config.CodeCoverage.Enabled = $true
           $config.TestResult.Enabled = $true
-          Invoke-Pester
+          Invoke-Pester -Configuration $config
 
       - name: Upload code coverage report
         if: ${{ always() }}
