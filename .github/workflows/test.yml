@@ -28,7 +28,7 @@ jobs:
         if: ${{ always() }}
         uses: actions/upload-artifact@v4
         with:
-          name: code-coverage-report
+          name: code-coverage-report-${{ runner.os }}-ps7
           path: coverage.xml
 
   ps5-test-module:
@@ -52,5 +52,5 @@ jobs:
         if: ${{ always() }}
         uses: actions/upload-artifact@v4
         with:
-          name: code-coverage-report
+          name: code-coverage-report-${{ runner.os }}-ps5
           path: coverage.xml
